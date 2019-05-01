@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Currency Exchange Calculator</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/bundle.js"></script>
+    
+  </head>
+  <body>
+   <div id="app">
+    <h1>Currency Exchange Calculator</h1>
+
+    <h4>From GBP to:</h4>
+    <label for="selectCurrency"></label>
+    <select id="selectCurrency" v-model="selectedCurrency">
+      <option value="">Select Currency</option>
+      <option v-for="(value, key) in currencies" :value="currencies">{{ rates.rates }}</option>
+    </select>
+    <h4>amount to be converted in GBP</h4>
+    <div id="amountgbp">
+     <input type="number" v-model.number="amountgbp" />
+   </div>
+
+     <h2>Current Exchange Rates:  {{    getCurrencies     }} </h2>
+     <button v-if="!"
+  </body>
+</html>
